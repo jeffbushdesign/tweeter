@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  background-color: #4056a1;
+  color: #ffffff;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+nav span {
+  font-family: "Bungee", cursive;
+}
+
+.vert {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.vert p {
+  margin-bottom: auto;
+}
+
+.vert i {
+  color: red;
+}

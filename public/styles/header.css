@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 400px;
+  background-color: #ffa69e;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}

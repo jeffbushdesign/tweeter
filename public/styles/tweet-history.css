@@ -1,21 +1,27 @@
 .tweet-history {
   border: #545149 solid 4px;
-  padding: 20px;
+  padding: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
+  transition: box-shadow ease-in-out 0.15s;
+  /* transition: box-shadow 0.3s; */
+}
+.tweet-history:hover {
+  box-shadow: 6px 6px #c9cae2;
 }
 
 .tweet-history header {
   background-color: #f4f1ec;
+  background-image: none;
   height: auto;
   display: flex;
   flex-direction: row;
 }
 .tweet-history img {
-  width: 65px;
-  height: 65px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   /* flex: 1; */
   /* padding-left: 10px; */
@@ -27,15 +33,31 @@
   /* flex: 1; */
   margin-left: auto;
   margin-right: 15px;
+  color: #c9cae2;
 }
 
 .tweet {
   border-bottom: #545149 solid 4px;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .tweet-history footer {
+  display: flex;
+  flex-direction: row;
 }
-.tweet-history footer i {
+.tweet-history footer .days-ago {
+  font-size: 12px;
+}
+.tweet-history footer #icons {
+  font-size: 10px;
+  margin-left: auto;
+}
+.tweet-history footer #icons i {
+  margin: 0px 2px;
+  color: #4056a1;
+}
+.tweet-history footer #icons i:hover {
+  color: rgb(213, 164, 4);
 }

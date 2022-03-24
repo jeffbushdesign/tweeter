@@ -6,7 +6,12 @@ nav {
   color: #ffffff;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  position: relative;
+  /* position: relative; */
+  /* Fixed Nav Bar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* Fixed Nav Bar */
   z-index: 2;
 }
 

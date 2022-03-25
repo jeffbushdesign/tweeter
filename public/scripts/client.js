@@ -87,6 +87,7 @@ const submitHandler = function (event) {
   })
     .then(res => console.log("AJAX post result:", res))
     .catch(err => console.log(err));
+  // Reset the tweet text area to blank after submit
   $('#tweet-text').val('');
 };
 
@@ -100,6 +101,7 @@ $(document).ready(function () {
   renderTweets(tweetData);
 
 }); // $(document).ready(function () {
+// test
 
 
 

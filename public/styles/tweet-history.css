@@ -1,4 +1,4 @@
-.tweet-history {
+#tweets-container {
   border: #545149 solid 4px;
   padding: 10px;
   margin-top: 30px;
@@ -8,18 +8,18 @@
   transition: box-shadow ease-in-out 0.15s;
   /* transition: box-shadow 0.3s; */
 }
-.tweet-history:hover {
+#tweets-container:hover {
   box-shadow: 6px 6px #c9cae2;
 }
 
-.tweet-history header {
+#tweets-container header {
   background-color: #f4f1ec;
   background-image: none;
   height: auto;
   display: flex;
   flex-direction: row;
 }
-.tweet-history img {
+#tweets-container img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -43,21 +43,21 @@
   margin-bottom: 10px;
 }
 
-.tweet-history footer {
+#tweets-container footer {
   display: flex;
   flex-direction: row;
 }
-.tweet-history footer .days-ago {
+#tweets-container footer .days-ago {
   font-size: 12px;
 }
-.tweet-history footer #icons {
+#tweets-container footer #icons {
   font-size: 10px;
   margin-left: auto;
 }
-.tweet-history footer #icons i {
+#tweets-container footer #icons i {
   margin: 0px 2px;
   color: #4056a1;
 }
-.tweet-history footer #icons i:hover {
+#tweets-container footer #icons i:hover {
   color: rgb(213, 164, 4);
 }

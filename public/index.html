@@ -83,6 +83,10 @@
         transition full-cab slappy.
       </p>
       <section class="new-tweet">
+        <div id="error">
+          <span id="blankMsg">Error. Tweet is empty.</span>
+          <span id="tooLong">Error. Tweet exceeds 140 character limit.</span>
+        </div>
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="tweet-form" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>

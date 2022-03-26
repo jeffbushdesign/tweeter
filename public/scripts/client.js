@@ -4,31 +4,31 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+// const tweetData = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ];
 
 const createTweetElement = function (tweetObj) {
   console.log('Tweet Object', tweetObj);
@@ -73,28 +73,31 @@ const renderTweets = function (tweets) {
 
 
 
-//and sends ajax post to server
-const submitHandler = function (event) {
-  // prevent default submit behavior
-  event.preventDefault();
-  // Serialize the form data
-  const tweetTextSerialized = $(event.target).serialize();
-  // Use the jQuery library to submit a POST request that sends the serialized data to the server
-  $.ajax({
-    url: "/tweets",
-    method: "POST",
-    data: tweetTextSerialized
-  })
-    .then(res => console.log("AJAX post result:", res))
-    .catch(err => console.log(err));
-  // Reset the tweet text area to blank after submit
-  $('#tweet-text').val('');
-  loadTweets();
-};
+
 
 // A $( document ).ready() block.
 $(document).ready(function () {
   console.log("Document is now ready!");
+  //and sends ajax post to server
+  const submitHandler = function (event) {
+    // prevent default submit behavior
+    event.preventDefault();
+    // Serialize the form data
+    const tweetTextSerialized = $(event.target).serialize();
+    // Use the jQuery library to submit a POST request that sends the serialized data to the server
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: tweetTextSerialized
+    })
+      .then(res => {
+        console.log("AJAX post result:", res);
+        // Reset the tweet text area to blank after submit
+        $('#tweet-text').val('');
+        loadTweets();
+      })
+      .catch(err => console.log(err));
+  };
 
   const loadTweets = function () {
     $.ajax({

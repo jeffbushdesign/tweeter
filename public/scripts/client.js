@@ -89,19 +89,34 @@ const submitHandler = function (event) {
     .catch(err => console.log(err));
   // Reset the tweet text area to blank after submit
   $('#tweet-text').val('');
+  loadTweets();
 };
 
 // A $( document ).ready() block.
 $(document).ready(function () {
   console.log("Document is now ready!");
 
+  const loadTweets = function () {
+    $.ajax({
+      url: "/tweets",
+      method: 'GET',
+      // dataType: 'json', // added data type
+    })
+      .then((req, res) => {
+        console.log("AJAX GET /tweets request:", req, "GET / tweets response:", res);
+        renderTweets(req);
+      })
+      .catch(err => console.log(err));
+  };
+  loadTweets();
+
   // Add an event listener for submit
   $('#tweet-form').on('submit', submitHandler);
 
-  renderTweets(tweetData);
-
 }); // $(document).ready(function () {
 // test
+
+
 
 
 

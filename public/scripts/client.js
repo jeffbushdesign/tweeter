@@ -70,6 +70,24 @@ const renderTweets = function (tweets) {
 };
 // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
+const formValidation = function () {
+  const tweetText = $('#tweet-text').val();
+
+  // delete previous errors
+  $('.error').remove();
+
+  // User can't enter blank text
+  if (!tweetText) {
+    alert('Error. Tweet is empty.');
+    return false;
+  }
+  if (tweetText.length > 140) {
+    alert('Ne pas de over 140 characters.');
+    return false;
+  }
+  return true;
+};
+
 
 
 
@@ -82,21 +100,25 @@ $(document).ready(function () {
   const submitHandler = function (event) {
     // prevent default submit behavior
     event.preventDefault();
-    // Serialize the form data
-    const tweetTextSerialized = $(event.target).serialize();
-    // Use the jQuery library to submit a POST request that sends the serialized data to the server
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: tweetTextSerialized
-    })
-      .then(res => {
-        console.log("AJAX post result:", res);
-        // Reset the tweet text area to blank after submit
-        $('#tweet-text').val('');
-        loadTweets();
+
+    if (formValidation()) {
+      // Serialize the form data
+      const tweetTextSerialized = $(event.target).serialize();
+
+      // Use the jQuery library to submit a POST request that sends the serialized data to the server
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: tweetTextSerialized
       })
-      .catch(err => console.log(err));
+        .then(res => {
+          console.log("AJAX post result:", res);
+          // Reset the tweet text area to blank after submit
+          $('#tweet-text').val('');
+          loadTweets();
+        })
+        .catch(err => console.log(err));
+    }
   };
 
   const loadTweets = function () {

@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="/styles/tweet-history.css" type="text/css" />
 
     <!-- External JS -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- timeago -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
       integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
@@ -39,6 +41,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto Mono -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto+Mono&family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
     <link
@@ -82,11 +89,24 @@
         air cess slide. Spine yeah frontside finger flip Alternative Sports
         transition full-cab slappy.
       </p>
+      <!-- 
+      <script>
+        $(document).ready(function () {
+          $(".error").click(function () {
+            $("#error").slideDown();
+          });
+        });
+      </script>
+      -->
       <section class="new-tweet">
-        <div id="error">
+        <!-- Error messages - hidden unless an error is triggered -->
+        <div id="errorEmpty">
           <span id="blankMsg">Error. Tweet is empty.</span>
-          <span id="tooLong">Error. Tweet exceeds 140 character limit.</span>
         </div>
+        <div id="errorLengthTooLong">
+          <span id="blankMsg">Error. Tweet exceeds 140 character limit.</span>
+        </div>
+
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="tweet-form" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>

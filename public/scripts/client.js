@@ -59,13 +59,19 @@ const formValidation = function () {
 
   // User can't enter blank text
   if (!tweetText) {
-    alert('Error. Tweet is empty.');
+    // Old js alert
+    // alert('Error. Tweet is empty.');
+    $("#errorEmpty").slideDown();
     return false;
   }
   if (tweetText.length > 140) {
-    alert('Ne pas de over 140 characters.');
+    // alert('Ne pas de over 140 characters.');
+    $("#errorLengthTooLong").slideDown();
     return false;
   }
+  // Hide error messages if they've been corrected
+  $("#errorEmpty").slideUp();
+  $("#errorLengthTooLong").slideUp();
   return true;
 };
 

@@ -41,17 +41,17 @@ const createTweetElement = function (tweetObj) {
         </header>
         <span class="tweet">${tweetObj.content.text}</span>
         <footer>
-          <span class="days-ago">10 days ago</span>
-          <div id="icons">
-            <!-- flag icon -->
-            <i class="fa-solid fa-flag"></i>
-            <!-- re-tweet arrow icon -->
-            <i class="fa-solid fa-retweet"></i>
-            <!-- heart icon -->
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+          <span class="days-ago">${timeago.format(tweetObj.created_at)}</span>
+  <div id="icons">
+    <!-- flag icon -->
+    <i class="fa-solid fa-flag"></i>
+    <!-- re-tweet arrow icon -->
+    <i class="fa-solid fa-retweet"></i>
+    <!-- heart icon -->
+    <i class="fa-solid fa-heart"></i>
+  </div>
+        </footer >
+      </article >
   `);
   return $tweet;
 };
@@ -123,4 +123,4 @@ $(document).ready(function () {
 
 
 
-
+;

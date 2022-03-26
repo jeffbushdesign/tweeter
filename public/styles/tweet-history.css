@@ -49,7 +49,9 @@
 }
 #tweets-container footer .days-ago {
   font-size: 12px;
+  text-transform: capitalize;
 }
+
 #tweets-container footer #icons {
   font-size: 10px;
   margin-left: auto;

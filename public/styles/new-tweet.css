@@ -47,8 +47,17 @@
   text-align: center;
   font-family: "Roboto Mono", monospace;
   color: black;
-  width: 30%;
+  width: 40%;
   margin: 20px;
   padding: 10px;
   display: none;
+}
+
+#errorEmpty i {
+  color: #e97725;
+  padding: 0 20px 0 20px;
+}
+#errorLengthTooLong i {
+  color: #e97725;
+  padding: 0 20px 0 20px;
 }

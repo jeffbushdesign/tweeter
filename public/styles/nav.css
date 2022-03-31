@@ -2,8 +2,12 @@ nav {
   display: flex;
   align-items: center;
   height: 120px;
-  background-color: #4056a1;
-  color: #ffffff;
+  /* background-color: #4056a1; */
+  /* color: #ffffff; */
+  /* background-color: #ffa69e; */
+  /* background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png"); */
+  background-color: transparent;
+  /* background-image: none; */
   padding-left: 1.5em;
   padding-right: 1.5em;
   /* position: relative; */
@@ -32,4 +36,12 @@ nav span {
 
 .vert i {
   color: red;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: #4056a1;
+    color: #ffffff;
+  }
 }

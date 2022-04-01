@@ -20,7 +20,7 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  width: 100%;
+  min-width: 430px;
 }
 
 /*
@@ -37,4 +37,8 @@ main {
 }
 .bungee-font {
   font-family: "Bungee", cursive;
+}
+
+.new-tweet {
+  padding: 20px;
 }

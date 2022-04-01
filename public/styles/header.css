@@ -6,13 +6,14 @@ header#top {
   position: relative;
   z-index: 1;
   /* height: 400px; */
+  padding-top: 120px;
   background-color: #ffa69e;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   /* margin-top: 120px; this compensates for fixed nav */
 }
 #profile {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   max-width: 33%;
   height: auto;
 }

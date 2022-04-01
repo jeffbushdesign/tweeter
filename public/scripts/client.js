@@ -20,17 +20,17 @@ const createTweetElement = function (tweetObj) {
           <span id="name">${tweetObj.user.name}</span>
           <span id="handle">${tweetObj.user.handle}</span>
         </header>
-        <span class="tweet">${escape(tweetObj.content.text)}</span>
+        <p class="tweetObj">${escape(tweetObj.content.text)}</span>
         <footer>
           <span class="days-ago">${timeago.format(tweetObj.created_at)}</span>
-  <div id="icons">
-    <!-- flag icon -->
-    <i class="fa-solid fa-flag"></i>
-    <!-- re-tweet arrow icon -->
-    <i class="fa-solid fa-retweet"></i>
-    <!-- heart icon -->
-    <i class="fa-solid fa-heart"></i>
-  </div>
+          <div id="icons">
+            <!-- flag icon -->
+            <i class="fa-solid fa-flag"></i>
+            <!-- re-tweet arrow icon -->
+            <i class="fa-solid fa-retweet"></i>
+            <!-- heart icon -->
+            <i class="fa-solid fa-heart"></i>
+          </div>
         </footer >
       </article >
   `);

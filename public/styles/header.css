@@ -3,15 +3,17 @@ header#top {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
+
+  /* position: relative; */
+  /* z-index: 1; */
   width: 100%;
-  /* height: 400px; */
-  padding-top: 120px;
+  /* padding-top: 12rem; */
   background-color: #ffa69e;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   /* margin-top: 120px; this compensates for fixed nav */
+}
+#name {
 }
 #profile {
   /* margin-top: 30px; */
@@ -23,7 +25,10 @@ header#top {
   header#top {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 25rem;
+    height: 250px;
+    margin: 3rem;
+    margin-top: 15rem;
   }
 }
 

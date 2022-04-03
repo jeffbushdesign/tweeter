@@ -16,7 +16,7 @@ const createTweetElement = function (tweetObj) {
   const $tweet = $(`
     <article class="tweet">
         <header>
-          <img src="/images/profile-pic.png" />
+          <img src="${tweetObj.user.avatars}" alt="profilePicture">
           <span id="name">${tweetObj.user.name}</span>
           <span id="handle">${tweetObj.user.handle}</span>
         </header>

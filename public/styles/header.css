@@ -7,17 +7,23 @@ header#top {
   /* position: relative; */
   /* z-index: 1; */
   width: 100%;
-  /* padding-top: 12rem; */
-  background-color: #ffa69e;
+  /* padding-top: 10rem; */
+  background-color: #d69820;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  /* margin-top: 120px; this compensates for fixed nav */
+  margin-top: 120px; this compensates for fixed nav
 }
-#name {
+#headerName {
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: white;
 }
+
 #profile {
-  /* margin-top: 30px; */
-  max-width: 33%;
+  /* margin-top: 0; */
+  max-width: 37%;
   height: auto;
 }
 /* Tablet Styles */
@@ -29,6 +35,18 @@ header#top {
     height: 250px;
     margin: 3rem;
     margin-top: 15rem;
+    padding: 1.5rem;
+  }
+  #headerName {
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  #profile {
+    margin-top: 1rem;
+
+    max-width: 68%;
+    height: auto;
   }
 }
 

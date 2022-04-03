@@ -17,11 +17,8 @@
   height: 40px;
   margin-right: 10px;
 }
-#name {
-  /* flex: 1; */
-}
+
 #handle {
-  /* flex: 1; */
   margin-left: auto;
   margin-right: 15px;
   color: #c9cae2;
@@ -30,7 +27,6 @@
 .tweet {
   border: #545149 solid 4px;
   padding: 20px;
-  /* padding-bottom: 20px; */
   margin-bottom: 34px;
   transition: box-shadow ease-in-out 0.15s;
 }
@@ -72,7 +68,6 @@
     width: 54%;
     margin: 3rem;
     margin-left: 0rem;
-
     margin-top: 120px;
   }
 }

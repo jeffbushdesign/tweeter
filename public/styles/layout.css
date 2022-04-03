@@ -26,9 +26,6 @@ body {
   min-width: 430px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 body {
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -50,10 +47,6 @@ main {
 @media only screen and (min-width: 768px) {
   body {
     flex-direction: row;
-    /* gap: 1rem 6rem; */
     justify-content: center;
   }
-  /* #name {
-    font-size: 1rem;
-  } */
 }

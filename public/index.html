@@ -5,6 +5,7 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
+    <!-- Normalize to standardize css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -61,15 +62,12 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+
     <header id="top">
-      <!-- <div> -->
       <img id="profile" src="/images/profile-hex.png" />
-      <!-- </div> -->
-      <!-- <br /> -->
       <h2 id="headerName">Jeff Bush</h2>
     </header>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <!-- Error messages - hidden unless an error is triggered -->
@@ -100,25 +98,7 @@
           </div>
         </form>
       </section>
-      <section id="tweets-container">
-        <!-- <header> 
-          <img src="/images/profile-pic.png" />
-          <span id="name">Newton</span>
-          <span id="handle">@SirIsaac</span>
-        </header>
-        <span class="tweet">I love calculus.</span>
-        <footer>
-          <span class="days-ago">10 days ago</span>
-          <div id="icons">
-            <!-- flag icon -->
-        <!-- <i class="fa-solid fa-flag"></i> -->
-        <!-- re-tweet arrow icon -->
-        <!-- <i class="fa-solid fa-retweet"></i> -->
-        <!-- heart icon -->
-        <!-- <i class="fa-solid fa-heart"></i> -->
-        <!-- </div> -->
-        <!-- </footer> -->
-      </section>
+      <section id="tweets-container"></section>
     </main>
   </body>
 </html>

@@ -10,7 +10,6 @@ nav {
   width: 100%;
   background-color: #d69820;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-  /* Fixed Nav Bar */
   z-index: 2;
 }
 

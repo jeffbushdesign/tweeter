@@ -36,9 +36,6 @@ const createTweetElement = function (tweetObj) {
   `);
   return $tweet;
 };
-// const $tweet = createTweetElement(tweetData);
-// Test / driver code (temporary)
-// return ($tweet); // to see what it looks like
 
 const renderTweets = function (tweets) {
   // loops through tweets
@@ -49,7 +46,6 @@ const renderTweets = function (tweets) {
     $('#tweets-container').prepend(result);
   }
 };
-// to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 const formValidation = function () {
   const tweetText = $('#tweet-text').val();
@@ -59,13 +55,10 @@ const formValidation = function () {
 
   // User can't enter blank text
   if (!tweetText) {
-    // Old js alert
-    // alert('Error. Tweet is empty.');
     $("#errorEmpty").slideDown();
     return false;
   }
   if (tweetText.length > 140) {
-    // alert('Ne pas de over 140 characters.');
     $("#errorLengthTooLong").slideDown();
     return false;
   }
@@ -74,11 +67,6 @@ const formValidation = function () {
   $("#errorLengthTooLong").slideUp();
   return true;
 };
-
-
-
-
-
 
 // A $( document ).ready() block.
 $(document).ready(function () {
@@ -126,10 +114,7 @@ $(document).ready(function () {
   $('#tweet-form').on('submit', submitHandler);
 
 }); // $(document).ready(function () {
-// test
 
 
 
 
-
-;

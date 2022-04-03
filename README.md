@@ -9,15 +9,17 @@ This repository is the starter code for the project: Students will fork and clon
 :--:
 | *Mobile layout* |
 
+
 | ![02-tablet-and-desktop-layout](https://user-images.githubusercontent.com/41748727/161408710-171955d5-ee7c-4d01-88ed-c5fa7091eaf3.png) |
 :--:
 | *Tablet/Desktop layout* |
+
 
 | ![03-error-message](https://user-images.githubusercontent.com/41748727/161408709-61d9a995-7bc6-4b9c-a257-c148d34513ca.png) |
 :--:
 | *Error message* |
 
-here
+
 
 ## Getting Started
 

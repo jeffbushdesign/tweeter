@@ -38,12 +38,14 @@ const createTweetElement = function (tweetObj) {
 };
 
 const renderTweets = function (tweets) {
+  // $('#tweets-container').empty();
   // loops through tweets
   for (const tweet of tweets) {
     // calls createTweetElement for each tweet
     const result = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
     $('#tweets-container').prepend(result);
+
   }
 };
 
@@ -86,11 +88,12 @@ $(document).ready(function () {
         method: "POST",
         data: tweetTextSerialized
       })
-        .then(res => {
-          console.log("AJAX post result:", res);
+        .then((req, res) => {
+          console.log("AJAX post result:", req.content);
           // Reset the tweet text area to blank after submit
           $('#tweet-text').val('');
-          loadTweets();
+          // loadTweets();
+          renderTweets([req])
         })
         .catch(err => console.log(err));
     }
